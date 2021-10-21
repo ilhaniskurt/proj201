@@ -16,14 +16,10 @@ with open(f"{HTML_DIR}/{HTML_DOC_NAME}", "r", encoding="utf-8") as html_doc:
   soup = BeautifulSoup(html_doc, "html.parser")
   html_doc.close()
 
-# Get Links
-links = soup.find_all("a")
-
-# Filter Links
-filteredLinks = []
-for link in links:
+# Get & Filter Links
+links = []
+for link in soup.find_all("a"):
   if LINK_FILTER in str(link.get("href")):
-    filteredLinks.append(link.get("href"))
-
+    links.append(link.get("href"))
 
 
