@@ -22,4 +22,5 @@ for link in soup.find_all("a"):
   if LINK_FILTER in str(link.get("href")):
     links.append(link.get("href"))
 
+print(link.get("href"))
 
