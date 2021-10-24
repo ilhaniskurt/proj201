@@ -1,3 +1,7 @@
+#
+#   Script coded by Mete Harun Akçay
+#       meteharun@sabanciuniv.edu
+#
 from bs4 import BeautifulSoup
 import requests
 soup = BeautifulSoup(open("beta/catalog.html", encoding="utf-8"), "html.parser")
