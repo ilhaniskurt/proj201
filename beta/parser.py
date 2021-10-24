@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup 
+import requests
 
 # Environment Variables
 HTML_DIR = "beta/files"
@@ -22,5 +23,7 @@ for link in soup.find_all("a"):
   if LINK_FILTER in str(link.get("href")):
     links.append(link.get("href"))
 
-print(link.get("href"))
-
+# Get Courses
+for x in links:
+  r = requests.get(x)
+  requestSoup = BeautifulSoup(r.content)
