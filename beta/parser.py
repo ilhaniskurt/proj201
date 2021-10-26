@@ -70,7 +70,7 @@ def getCourseTitles(links):
 def getCourses(links, courses):
     # Course Name, Prerequisites, Corequisites
     output = []
-    output.append(["COURSE NAMES", "PREREQUISTES", "COREQUISITES"])
+    output.append(["COURSE NAMES", "COREQUISTES", "PREREQUISTES"])
     start = perf_counter()
     print("[Log]: Getting course infos...")
     counter = 0
