@@ -68,7 +68,7 @@ def getCourseTitles(links):
 
 # Get Courses
 def getCourses(links, courses):
-    # Course Name, Prerequisites, Co-requisites
+    # Course Name, Prerequisites, Corequisites
     output = []
     output.append(["COURSE NAMES", "PREREQUISTES", "COREQUISITES"])
     start = perf_counter()
@@ -95,15 +95,15 @@ def getCourses(links, courses):
             if course != "N/A":
                 counter += 1
                 thiscourse = ["N/A", "N/A", "N/A"]
-                print("Course: " + course)
+                #print("Course: " + course)
                 thiscourse[0] = course
                 if corenum > 0:
-                    print("Coreq: " + lines[corenum + 1])
+                    #print("Coreq: " + lines[corenum + 1])
                     thiscourse[1] = lines[corenum + 1]
                 if prenum > 0:
-                    print("Preq: " + lines[prenum + 1])
+                    #print("Preq: " + lines[prenum + 1])
                     thiscourse[2] = lines[prenum + 1]
-                print("\n\n")
+                #print("\n\n")
                 output.append(thiscourse)
     print("[Log]: {} course infos gathered in {:.2f} secs!".format(counter, perf_counter() - start))
     return output
@@ -115,7 +115,7 @@ def main():
     links = getLinks(soup)
     courses = getCourseTitles(links)
     output = getCourses(links, courses)
-    saveOutput("output2.txt", output)
+    saveOutput("output.txt", output)
 
 if __name__ == "__main__":
     main()
