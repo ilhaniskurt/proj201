@@ -2,10 +2,11 @@ This branch is currently being worked upon.
 
 # Details about the scripts
 ## "parser.py"
-* External Libraries Used:
+* __External Libraries Used:__
   * BeautifulSoup4, 
   * requests
-* Default Environment Variables:
+
+* __Default Environment Variables:__
   * FILE_DIR = "beta/files",
   * FILE_NAME = "catalog.html",
   * LINK_FILTER = "https://suis.sabanciuniv.edu/prod/bwckctlg.p_disp_course_detail"
