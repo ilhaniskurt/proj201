@@ -6,8 +6,8 @@
 import parser
 
 def displayCourses(array):
-    for key, value in array.items():
-        print(f"{key} : {value}")
+    for course, conditions in array.items():
+        print(f"{course} : {conditions}")
 
 def formatCourses(array):
     courses = {}
@@ -19,10 +19,22 @@ def formatCourses(array):
         courses[a[0]] = temp
     return courses
 
+# Find Imminent Dependencies
+def findDependencies(array):
+    dependencies = {}
+    for course ,conditions in array.items():
+        if "&" in conditions:
+            if "|" not in conditions:
+                dependencies[course] = conditions
+        if conditions.find("&") != -1 and conditions.find("|") != -1 and conditions.find("N/A")!= -1:
+            dependencies[course] = conditions
+    return dependencies
+
 # Entry Point
 def main():
     output = parser.getPickle(parser.PICKLE_NAME)
-    displayCourses(formatCourses(output))
+    courses = formatCourses(output)
+    displayCourses(findDependencies(courses))
 
 if __name__ == "__main__":
     main()
