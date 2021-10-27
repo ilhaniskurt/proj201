@@ -6,21 +6,23 @@
 import parser
 
 def displayCourses(array):
-  for course in array:
-    for index in course:
-      print(index, end="/ | /")
-    print("")
+    for key, value in array.items():
+        print(f"{key} : {value}")
 
 def formatCourses(array):
-  newarray = array
-  for courses in newarray:
-    courses.append(courses[2][courses[2].find("level") + 7:courses[2].find("Minimum") - 1])
-  return newarray
+    courses = {}
+    for a in array:
+        # Strip Unnecessary Words
+        temp = a[2].replace(" ", "").replace("MinimumGradeofD","").replace("level","").replace("Undergraduate","").replace("Masters", "").replace("Doctorate","")
+        # Add Logic Operators
+        temp = temp.replace("or","|").replace("and","&")
+        courses[a[0]] = temp
+    return courses
 
 # Entry Point
 def main():
-  output = parser.getPickle(parser.PICKLE_NAME)
-  displayCourses(formatCourses(output))
+    output = parser.getPickle(parser.PICKLE_NAME)
+    displayCourses(formatCourses(output))
 
 if __name__ == "__main__":
     main()
