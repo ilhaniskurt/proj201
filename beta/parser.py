@@ -2,19 +2,39 @@
 #   Script coded by İlhan Yavuz İskurt
 #       ilhan.iskurt@sabanciuniv.edu
 #
-#   Original Script: kkkk.py
+#           Based upon: kkkk.py
 
-from bs4 import BeautifulSoup 
-import requests
+# Internal Libraries
 import os.path
 from time import perf_counter
+import pickle
+
+# External Libraries
+from bs4 import BeautifulSoup 
+import requests
+
 
 # Environment Variables
 FILE_DIR = "beta/files"
 FILE_NAME = "catalog.html"
 LINK_FILTER = "https://suis.sabanciuniv.edu/prod/bwckctlg.p_disp_course_detail"
+PICKLE_NAME = "course_data"
 
-# Save it as a file
+# Save output as a file - using pickle
+def savePickle(name, object):
+    with open(f"{FILE_DIR}/{name}", "wb") as dumpFile:
+        pickle.dump(object, dumpFile)
+        dumpFile.close()
+
+# Get dump as an object - using pickle
+# Meant to be imported!
+def getPickle(name):
+    with open(f"{FILE_DIR}/{name}", "rb") as dumpFile:
+        p = pickle.load(dumpFile)
+        dumpFile.close()
+    return p
+
+# Save output as a file - manually
 def saveOutput(printName, text):
     with open(f"{FILE_DIR}/{printName}", "a" if os.path.exists(f"{FILE_DIR}/{printName}") else "x") as parsed_doc:
         if isinstance(text,list):
@@ -115,7 +135,7 @@ def main():
     links = getLinks(soup)
     courses = getCourseTitles(links)
     output = getCourses(links, courses)
-    saveOutput("output.txt", output)
+    savePickle(PICKLE_NAME, output)
 
 if __name__ == "__main__":
     main()
