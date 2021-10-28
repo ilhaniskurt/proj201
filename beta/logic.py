@@ -5,6 +5,7 @@
 
 # Local Modules
 import parser
+import re
 
 def displayDicts(dict):
     for course, conditions in dict.items():
@@ -21,6 +22,34 @@ def formatCourses(dict):
         courses[a[0]] = temp
     return courses
 
+#function to find errors (if prerequesities don't exist in catalog)
+def findingErrors(dict):
+  errors={}
+  checker=0
+  for course, conditions in dict.items():
+    if conditions not in dict.keys():
+      if "|" in conditions or "&" in conditions:
+        conditions= re.findall(r"[\w']+", conditions)
+        checker=1
+        for condition in conditions:
+          if condition not in dict.keys():
+            errors[course]=conditions
+            break
+      if checker == 0:
+        errors[course]=conditions
+  return errors
+
+
+#function to find errors (if prerequisites repeat itself in one course)
+def findingDuplicates(dict):
+  duplicates={}
+  for course, conditions in dict.items():
+    if "|" in conditions or "&" in conditions:
+      conditions= re.findall(r"[\w']+", conditions)
+      if conditions[0]==conditions[1]:
+        duplicates[course]=conditions
+  return duplicates
+
 # Find Imminent Dependencies
 def findDependencies(dict):
     dependencies = {}
@@ -36,6 +65,11 @@ def main():
 
     dependencies = findDependencies(courses)
     displayDicts(dependencies)
+    
+    print('Courses containing prerequesite(s) that don\'t exist in Catalog: ')
+    displayDicts(findingErrors(courses))
+    print('Courses containing duplicates in "Prerequesite" sections: ')
+    displayDicts(findingDuplicates(courses))
 
 if __name__ == "__main__":
     main()
