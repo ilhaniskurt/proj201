@@ -5,7 +5,10 @@
 
 # Local Modules
 import parser
+
+# Internal Libraries
 import re
+import collections
 
 def displayDicts(dict):
     for course, conditions in dict.items():
@@ -24,16 +27,16 @@ def formatCourses(dict):
 
 #function to find errors (if prerequesities don't exist in catalog)
 def findingErrors(dict):
-  errors={}
-  checker=0
+  errors = {}
+  checker = 0
   for course, conditions in dict.items():
     if conditions not in dict.keys():
       if "|" in conditions or "&" in conditions:
-        conditions= re.findall(r"[\w']+", conditions)
-        checker=1
+        conditions = re.findall(r"[\w']+", conditions)
+        checker = 1
         for condition in conditions:
           if condition not in dict.keys():
-            errors[course]=conditions
+            errors[course] = conditions
             break
       if checker == 0:
         errors[course]=conditions
@@ -41,14 +44,14 @@ def findingErrors(dict):
 
 
 #function to find errors (if prerequisites repeat itself in one course)
-def findingDuplicates(dict):
-  duplicates={}
-  for course, conditions in dict.items():
-    if "|" in conditions or "&" in conditions:
-      conditions= re.findall(r"[\w']+", conditions)
-      if conditions[0]==conditions[1]:
-        duplicates[course]=conditions
-  return duplicates
+def findDuplicates(dict):
+    duplicates={}
+    for course, conditions in dict.items():
+        if "|" in conditions or "&" in conditions:
+            conditions = re.findall(r"[\w']+", conditions)
+            duplicates[course] = [item for item, count in collections.Counter(conditions).items() if count > 1]
+            if not duplicates[course]: duplicates.pop(course, None)
+    return duplicates
 
 # Find Imminent Dependencies
 def findDependencies(dict):
@@ -63,13 +66,15 @@ def main():
     output = parser.getPickle(parser.PICKLE_NAME)
     courses = formatCourses(output)
 
-    dependencies = findDependencies(courses)
-    displayDicts(dependencies)
+    # displayDicts(courses)
+
+    # dependencies = findDependencies(courses)
+    # displayDicts(dependencies)
     
-    print('Courses containing prerequesite(s) that don\'t exist in Catalog: ')
-    displayDicts(findingErrors(courses))
+    # print('Courses containing prerequesite(s) that don\'t exist in Catalog: ')
+    # displayDicts(findingErrors(courses))
     print('Courses containing duplicates in "Prerequesite" sections: ')
-    displayDicts(findingDuplicates(courses))
+    displayDicts(findDuplicates(courses))
 
 if __name__ == "__main__":
     main()
