@@ -27,11 +27,11 @@ def formatCourses(dict):
         courses[a[0].replace(" ", "")] = temp
     return courses
 
-# Function to find errors (if prerequesities don't exist in catalog)
+# Function to find ghost courses (if prerequesities don't exist in catalog)
 def findGhosts(dict):
     ghosts = {}
     for course, conditions in dict.items():
-        conditions=conditions.replace("(", "").replace(")", "").replace(" ","")
+        conditions = conditions.replace("(", "").replace(")", "").replace(" ","")
         if conditions not in dict.keys():
             if "|" in conditions or "&" in conditions:
                 conditions = re.split('[&|]', conditions)
@@ -41,16 +41,23 @@ def findGhosts(dict):
                         break
     return ghosts
 
-
 # Function to find errors (if prerequisites repeat itself in one course)
 def findDuplicates(dict):
-    duplicates={}
+    duplicates = {}
     for course, conditions in dict.items():
         if "|" in conditions or "&" in conditions:
             conditions = re.findall(r"[\w']+", conditions)
             duplicates[course] = [item for item, count in collections.Counter(conditions).items() if count > 1]
             if not duplicates[course]: duplicates.pop(course, None)
     return duplicates
+
+# Find courses that require themselves
+def findLoops(dict):
+    loops = {}
+    for course, conditions in dict.items():
+        if course in conditions:
+            loops[course] = conditions
+    return loops
 
 # Find Imminent Dependencies
 def findDependencies(dict):
@@ -65,11 +72,14 @@ def main():
     output = parser.getPickle(parser.PICKLE_NAME)
     courses = formatCourses(output)
 
+    #parser.saveOutput("coursedict.txt", courses)
+
     dependencies = findDependencies(courses)
     ghosts = findGhosts(courses)
+    loops = findLoops(courses)
     duplicates = findDuplicates(courses)
 
-    displayDicts(ghosts)
+    displayDicts(loops)
 
 if __name__ == "__main__":
     main()

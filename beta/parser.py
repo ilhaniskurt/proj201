@@ -36,7 +36,7 @@ def getPickle(name):
 
 # Save output as a file - manually
 def saveOutput(printName, text):
-    with open(f"{FILE_DIR}/{printName}", "a" if os.path.exists(f"{FILE_DIR}/{printName}") else "x") as parsed_doc:
+    with open(f"{FILE_DIR}/{printName}", "w" if os.path.exists(f"{FILE_DIR}/{printName}") else "x") as parsed_doc:
         if isinstance(text,list):
             for t in text:
                 if isinstance(t,list):
@@ -44,6 +44,9 @@ def saveOutput(printName, text):
                         parsed_doc.writelines(str(i) + "\n")
                 else:
                     parsed_doc.writelines(str(t) + "\n")
+        elif isinstance(text,dict):
+            for course, conditions in text.items():
+                parsed_doc.writelines(f"{course} : {conditions}\n")
         else:
             parsed_doc.write(str(text))
         parsed_doc.close()
