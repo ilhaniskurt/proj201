@@ -31,9 +31,10 @@ def formatCourses(dict):
 def findGhosts(dict):
     ghosts = {}
     for course, conditions in dict.items():
+        conditions=conditions.replace("(", "").replace(")", "").replace(" ","")
         if conditions not in dict.keys():
             if "|" in conditions or "&" in conditions:
-                conditions = re.findall(r"[\w']+", conditions)
+                conditions = re.split('[&|]', conditions)
                 for condition in conditions:
                     if condition not in dict.keys():
                         ghosts[course] = condition
