@@ -30,15 +30,19 @@ def formatCourses(dict):
 # Function to find errors (if prerequesities don't exist in catalog)
 def findGhosts(dict):
     ghosts = {}
+    checker=0
     for course, conditions in dict.items():
         conditions=conditions.replace("(", "").replace(")", "").replace(" ","")
         if conditions not in dict.keys():
             if "|" in conditions or "&" in conditions:
                 conditions = re.split('[&|]', conditions)
+                checker=1
                 for condition in conditions:
                     if condition not in dict.keys():
                         ghosts[course] = condition
                         break
+        if checker == 0 and conditions !=  "N/A":
+            ghosts[course]=conditions               
     return ghosts
 
 
