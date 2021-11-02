@@ -2,6 +2,8 @@ This branch is currently being worked upon.
 
 # Details about the scripts
 ## "parser.py"
+* __Function:__ Scrap data from a html file
+
 * __External Libraries Used:__
   * BeautifulSoup4, 
   * requests
@@ -11,6 +13,16 @@ This branch is currently being worked upon.
   * FILE_NAME = "catalog.html",
   * LINK_FILTER = "https://suis.sabanciuniv.edu/prod/bwckctlg.p_disp_course_detail"
   * PICKLE_NAME = "course_data"
+
+## "logic.py"
+* __Function:__ The main script that analysizes the catalog
+
+* __Local Modules Used:__
+  * "parser.py"
+  * "coursenodes.py"
+
+## "coursesnodes.py"
+* __Function:__ Systematize the courses
 
 # Credits:
 * "parser.py" - İlhan Yavuz İskurt

@@ -7,6 +7,7 @@
 
 # Local Modules
 import parser
+import coursenodes
 
 # Internal Libraries
 import re
@@ -62,9 +63,11 @@ def findLoops(dict):
 # Find Imminent Dependencies
 def findDependencies(dict):
     dependencies = {}
-    for course ,conditions in dict.items():
+    for course, conditions in dict.items():
         if conditions.find("&") != -1 and conditions.find("|") == -1 and conditions.find("N/A") == -1:
-            dependencies[course] = conditions
+            dependencies[course] = []
+            for condition in conditions.replace("(", "").replace(")", "").split("&"):
+                dependencies[course].append(condition)
     return dependencies
 
 # Entry Point
@@ -72,14 +75,16 @@ def main():
     output = parser.getPickle(parser.PICKLE_NAME)
     courses = formatCourses(output)
 
-    #parser.saveOutput("coursedict.txt", courses)
+    # parser.saveOutput("coursedict.txt", courses)
 
     dependencies = findDependencies(courses)
-    ghosts = findGhosts(courses)
-    loops = findLoops(courses)
-    duplicates = findDuplicates(courses)
+    # ghosts = findGhosts(courses)
+    # loops = findLoops(courses)
+    # duplicates = findDuplicates(courses)
 
-    displayDicts(loops)
+    expendenDependencies = coursenodes.getExpandedPreqDict(dependencies)
+    
+    displayDicts(expendenDependencies)
 
 if __name__ == "__main__":
     main()
