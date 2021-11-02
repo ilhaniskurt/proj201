@@ -82,9 +82,10 @@ def main():
     # loops = findLoops(courses)
     # duplicates = findDuplicates(courses)
 
-    expendenDependencies = coursenodes.getExpandedPreqDict(dependencies)
+    expendedDependencies = coursenodes.getExpandedPreqDict(dependencies)
     
-    displayDicts(expendenDependencies)
+    # displayDicts(expendedDependencies)
+    print(coursenodes.checkPath(expendedDependencies, "MAT408", "NS101"))
 
 if __name__ == "__main__":
     main()

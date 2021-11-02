@@ -25,6 +25,8 @@ def getExpandedPreqDict(courseNodes:dict):
                         if i not in courses[course]     ]
     return courses
 
+def checkPath(courseNodes:dict, courseName:str, coursePre:str):
+    return (coursePre in courseNodes[courseName] if courseName in courseNodes.keys() else False)
 
 def findReachableCourses():
     pass
