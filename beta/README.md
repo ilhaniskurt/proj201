@@ -26,6 +26,8 @@ This branch is currently being worked upon.
 
 # Credits:
 * "parser.py" - İlhan Yavuz İskurt
+* "logic.py" - İlhan Yavuz İskurt & Muslim Malsagov
+* "coursenodes.py" - İlhan Yavuz İskurt
 
 # Acknowledgements:
 "parser.py" is based and improved upon "kkkk.py" which was written by Mete Harun Akçay (meteharun@sabanciuniv.edu)
