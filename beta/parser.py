@@ -134,11 +134,12 @@ def getCourses(links, courses):
 
 # Entry Point
 def main():
-    soup = getSoup()
-    links = getLinks(soup)
-    courses = getCourseTitles(links)
-    output = getCourses(links, courses)
-    savePickle(PICKLE_NAME, output)
+    # soup = getSoup()
+    # links = getLinks(soup)
+    # courses = getCourseTitles(links)
+    # output = getCourses(links, courses)
+    # savePickle(PICKLE_NAME, output)
+    pass
 
 if __name__ == "__main__":
     main()

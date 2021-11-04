@@ -68,8 +68,10 @@ def findDependencies(dict):
 
 # Entry Point
 def main():
-    output = getPickle(PICKLE_NAME)
-    courses = formatCourses(output)
+    # output = getPickle(PICKLE_NAME)
+
+    # courses = formatCourses(output)
+    # savePickle("courses",courses)
 
     # saveOutput("__coursedict.txt", courses)
 
@@ -87,6 +89,7 @@ def main():
 
     # duplicates = findDuplicates(courses)
     # savePickle("duplicates",duplicates)
+    pass
     
 if __name__ == "__main__":
     main()
