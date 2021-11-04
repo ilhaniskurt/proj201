@@ -3,9 +3,6 @@
 #       ilhan.iskurt@sabanciuniv.edu
 #
 
-# Internal Libraries
-from collections import deque
-
 # Adding a course to the node dictionary (with first degree prerequisites) 
 def addCourse(courseNodes:dict, courseName:str, *args):
     if courseName not in courseNodes:

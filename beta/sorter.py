@@ -6,16 +6,12 @@
 #
 
 # Local Modules
-import parser
-import coursenodes
+from parser import saveOutput, savePickle, getPickle, PICKLE_NAME
+from coursenodes import getExpandedPreqDict, checkPath
 
 # Internal Libraries
 import re
 import collections
-
-def displayDicts(dict):
-    for course, conditions in dict.items():
-        print(f"{course} : {conditions}")
 
 # Format catalog into logic statements
 def formatCourses(dict):
@@ -72,20 +68,25 @@ def findDependencies(dict):
 
 # Entry Point
 def main():
-    output = parser.getPickle(parser.PICKLE_NAME)
+    output = getPickle(PICKLE_NAME)
     courses = formatCourses(output)
 
-    # parser.saveOutput("__coursedict.txt", courses)
+    # saveOutput("__coursedict.txt", courses)
 
     # dependencies = findDependencies(courses)
-    # expendedDependencies = coursenodes.getExpandedPreqDict(dependencies)
+    # savePickle("dependencies",dependencies)
+
+    # expendedDependencies = getExpandedPreqDict(dependencies)
+    # savePickle("expended_dependencies",expendedDependencies)
+
     # ghosts = findGhosts(courses)
+    # savePickle("ghosts",ghosts)
+
     # loops = findLoops(courses)
-    duplicates = findDuplicates(courses)
+    # savePickle("loops",loops)
 
-    displayDicts(duplicates)
+    # duplicates = findDuplicates(courses)
+    # savePickle("duplicates",duplicates)
     
-    # print(coursenodes.checkPath(expendedDependencies, "MAT408", "NS101"))
-
 if __name__ == "__main__":
     main()

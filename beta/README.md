@@ -15,7 +15,7 @@ This branch is currently being worked upon.
   * PICKLE_NAME = "course_data"
 
 ## "sorter.py"
-* __Function:__ The main script that analysizes the catalog
+* __Function:__ The script that creates additional dictionaries depending on context
 
 * __Local Modules Used:__
   * "parser.py"
