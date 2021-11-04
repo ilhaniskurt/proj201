@@ -14,7 +14,7 @@ This branch is currently being worked upon.
   * LINK_FILTER = "https://suis.sabanciuniv.edu/prod/bwckctlg.p_disp_course_detail"
   * PICKLE_NAME = "course_data"
 
-## "logic.py"
+## "sorter.py"
 * __Function:__ The main script that analysizes the catalog
 
 * __Local Modules Used:__
@@ -26,7 +26,7 @@ This branch is currently being worked upon.
 
 # Credits:
 * "parser.py" - İlhan Yavuz İskurt
-* "logic.py" - İlhan Yavuz İskurt & Muslim Malsagov
+* "sorter.py" - İlhan Yavuz İskurt & Muslim Malsagov
 * "coursenodes.py" - İlhan Yavuz İskurt
 
 # Acknowledgements:

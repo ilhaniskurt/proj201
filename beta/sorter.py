@@ -75,17 +75,17 @@ def main():
     output = parser.getPickle(parser.PICKLE_NAME)
     courses = formatCourses(output)
 
-    # parser.saveOutput("coursedict.txt", courses)
+    # parser.saveOutput("__coursedict.txt", courses)
 
-    dependencies = findDependencies(courses)
+    # dependencies = findDependencies(courses)
+    # expendedDependencies = coursenodes.getExpandedPreqDict(dependencies)
     # ghosts = findGhosts(courses)
     # loops = findLoops(courses)
-    # duplicates = findDuplicates(courses)
+    duplicates = findDuplicates(courses)
 
-    expendedDependencies = coursenodes.getExpandedPreqDict(dependencies)
+    displayDicts(duplicates)
     
-    # displayDicts(expendedDependencies)
-    print(coursenodes.checkPath(expendedDependencies, "MAT408", "NS101"))
+    # print(coursenodes.checkPath(expendedDependencies, "MAT408", "NS101"))
 
 if __name__ == "__main__":
     main()
