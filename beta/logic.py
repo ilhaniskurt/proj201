@@ -41,6 +41,25 @@ def fixGhosts(courses:dict, ghosts:dict):
                     if ghost[i-1] == operator and ghost[i+len(ghost)+1] == operator:
                         fixedDict[course] = conditions[:i-2] + conditions[i+1:]
                         continue
+                        
+                    #different case scenarios
+                    #if ghost course between '(' and operator
+                    if ghost[i-1] == "(" and ghost[i+len(ghost)+1] == operator:
+                        fixedDict[course] = conditions[:i-1] + conditions[i+2:]
+                        continue
+                    #if ghost course between operator and ")"
+                    if ghost[i-1] == operator and ghost[i+len(ghost)+1] == ")":
+                        fixedDict[course] = conditions[:i-2] + conditions[i+1:]
+                        continue
+                    #if none of previous if are satisfiable it will check the last 2 
+                    #if ghost course without "(", but just operator after it
+                    if ghost[i+len(ghost)+1] == operator:
+                        fixedDict[course] = conditions[i+2:]
+                        continue
+                    #if ghost course is in the end but without ")" and only operator before it
+                    if ghost[i-1] == operator :
+                        fixedDict[course] = conditions[:i-2]
+                        continue
         # NOTE Remember to check for logic operators that does not have courses on both sides (parenthesis does not count) and remove them
     return fixedDict
 
