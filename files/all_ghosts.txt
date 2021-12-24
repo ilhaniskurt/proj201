@@ -1,0 +1,494 @@
+
+-----------------
+Course Name: ACC301
+Prerequisites: ['MGMT202']
+-----------------
+-----------------
+Course Name: ACC402
+Prerequisites: ['ACC401']
+-----------------
+-----------------
+Course Name: ARA120
+Prerequisites: ['ARA301']
+-----------------
+-----------------
+Course Name: ARA130
+Prerequisites: ['ARA302']
+-----------------
+-----------------
+Course Name: ARA520
+Prerequisites: ['ARA501']
+-----------------
+-----------------
+Course Name: ARA530
+Prerequisites: ['ARA502']
+-----------------
+-----------------
+Course Name: CHI120
+Prerequisites: ['CHI102']
+-----------------
+-----------------
+Course Name: CIP102
+Prerequisites: ['TDP101']
+-----------------
+-----------------
+Course Name: CIP201
+Prerequisites: ['TDP102']
+-----------------
+-----------------
+Course Name: CIP202
+Prerequisites: ['TDP201']
+-----------------
+-----------------
+Course Name: CIP301
+Prerequisites: ['TDP202']
+-----------------
+-----------------
+Course Name: CS432
+Prerequisites: ['TE404']
+-----------------
+-----------------
+Course Name: CULT451
+Prerequisites: ['CULT291']
+-----------------
+-----------------
+Course Name: EE302
+Prerequisites: ['EL202']
+-----------------
+-----------------
+Course Name: EE303
+Prerequisites: ['EL202']
+-----------------
+-----------------
+Course Name: EE306
+Prerequisites: ['EL303']
+-----------------
+-----------------
+Course Name: EE401
+Prerequisites: ['EL302']
+-----------------
+-----------------
+Course Name: EE402
+Prerequisites: ['EL401']
+-----------------
+-----------------
+Course Name: EE405
+Prerequisites: ['EL303']
+-----------------
+-----------------
+Course Name: EE406
+Prerequisites: ['TE305']
+-----------------
+-----------------
+Course Name: EE407
+Prerequisites: ['EL204']
+-----------------
+-----------------
+Course Name: EE408
+Prerequisites: ['EL202', 'EL204']
+-----------------
+-----------------
+Course Name: EE413
+Prerequisites: ['TE304']
+-----------------
+-----------------
+Course Name: EE415
+Prerequisites: ['TE302']
+-----------------
+-----------------
+Course Name: EE419
+Prerequisites: ['TE302']
+-----------------
+-----------------
+Course Name: FRE120
+Prerequisites: ['FRE102']
+-----------------
+-----------------
+Course Name: FRE130
+Prerequisites: ['FRE201']
+-----------------
+-----------------
+Course Name: FRE140
+Prerequisites: ['FRE202']
+-----------------
+-----------------
+Course Name: GEN410
+Prerequisites: ['CULT341']
+-----------------
+-----------------
+Course Name: GEN480
+Prerequisites: ['CULT341']
+-----------------
+-----------------
+Course Name: GER120
+Prerequisites: ['GER102']
+-----------------
+-----------------
+Course Name: GER130
+Prerequisites: ['GER201']
+-----------------
+-----------------
+Course Name: GER140
+Prerequisites: ['GER202']
+-----------------
+-----------------
+Course Name: GER150
+Prerequisites: ['GER301']
+-----------------
+-----------------
+Course Name: GR503E
+Prerequisites: ['ENS555']
+-----------------
+-----------------
+Course Name: HART320
+Prerequisites: ['HUM212']
+-----------------
+-----------------
+Course Name: HART424
+Prerequisites: ['HUM212']
+-----------------
+-----------------
+Course Name: HART444
+Prerequisites: ['HUM212']
+-----------------
+-----------------
+Course Name: HIST601
+Prerequisites: ['TLL501', 'TLL502', 'TLL520']
+-----------------
+-----------------
+Course Name: HUM413
+Prerequisites: ['HUM204']
+-----------------
+-----------------
+Course Name: HUM414
+Prerequisites: ['HUM204', 'HUM214']
+-----------------
+-----------------
+Course Name: IE302
+Prerequisites: ['IE301', 'MS301']
+-----------------
+-----------------
+Course Name: IE304
+Prerequisites: ['IE301', 'MS301']
+-----------------
+-----------------
+Course Name: IE308
+Prerequisites: ['MS303']
+-----------------
+-----------------
+Course Name: IE312
+Prerequisites: ['IE301']
+-----------------
+-----------------
+Course Name: IE401
+Prerequisites: ['IE301', 'MS301']
+-----------------
+-----------------
+Course Name: IE402
+Prerequisites: ['MS309']
+-----------------
+-----------------
+Course Name: IE407
+Prerequisites: ['MS303']
+-----------------
+-----------------
+Course Name: IE408
+Prerequisites: ['MS304']
+-----------------
+-----------------
+Course Name: IE409
+Prerequisites: ['MS303', 'IE301', 'MS301']
+-----------------
+-----------------
+Course Name: IE411
+Prerequisites: ['MS302']
+-----------------
+-----------------
+Course Name: IE412
+Prerequisites: ['MS303']
+-----------------
+-----------------
+Course Name: IE414
+Prerequisites: ['MS304']
+-----------------
+-----------------
+Course Name: IE415
+Prerequisites: ['IE301', 'MS301']
+-----------------
+-----------------
+Course Name: IE417
+Prerequisites: ['MS304']
+-----------------
+-----------------
+Course Name: IE418
+Prerequisites: ['MS309']
+-----------------
+-----------------
+Course Name: IE420
+Prerequisites: ['IE301', 'MS301']
+-----------------
+-----------------
+Course Name: IE425
+Prerequisites: ['MS302', 'MS305']
+-----------------
+-----------------
+Course Name: IE430
+Prerequisites: ['IE301', 'MS301']
+-----------------
+-----------------
+Course Name: IE432
+Prerequisites: ['MS303']
+-----------------
+-----------------
+Course Name: IE454
+Prerequisites: ['MS401']
+-----------------
+-----------------
+Course Name: IE48005
+Prerequisites: ['MS309']
+-----------------
+-----------------
+Course Name: ITA120
+Prerequisites: ['ITA102']
+-----------------
+-----------------
+Course Name: ITA130
+Prerequisites: ['ITA201']
+-----------------
+-----------------
+Course Name: ITA140
+Prerequisites: ['ITA202']
+-----------------
+-----------------
+Course Name: JAP120
+Prerequisites: ['JAP102']
+-----------------
+-----------------
+Course Name: JAP130
+Prerequisites: ['JAP201']
+-----------------
+-----------------
+Course Name: JAP140
+Prerequisites: ['JAP202']
+-----------------
+-----------------
+Course Name: JAP550
+Prerequisites: ['JAP540']
+-----------------
+-----------------
+Course Name: KUR120
+Prerequisites: ['KUR102']
+-----------------
+-----------------
+Course Name: KUR130
+Prerequisites: ['KUR201']
+-----------------
+-----------------
+Course Name: KUR140
+Prerequisites: ['KUR202']
+-----------------
+-----------------
+Course Name: KUR520
+Prerequisites: ['KUR502']
+-----------------
+-----------------
+Course Name: KUR530
+Prerequisites: ['KUR503']
+-----------------
+-----------------
+Course Name: LAT120
+Prerequisites: ['LAT312']
+-----------------
+-----------------
+Course Name: LAT130
+Prerequisites: ['LAT313']
+-----------------
+-----------------
+Course Name: PERS120
+Prerequisites: ['PERS301']
+-----------------
+-----------------
+Course Name: PERS130
+Prerequisites: ['PERS302']
+-----------------
+-----------------
+Course Name: PERS140
+Prerequisites: ['PERS302']
+-----------------
+-----------------
+Course Name: PERS150
+Prerequisites: ['PERS303']
+-----------------
+-----------------
+Course Name: PERS520
+Prerequisites: ['PERS501']
+-----------------
+-----------------
+Course Name: PERS530
+Prerequisites: ['PERS502']
+-----------------
+-----------------
+Course Name: PERS540
+Prerequisites: ['PERS502']
+-----------------
+-----------------
+Course Name: PERS550
+Prerequisites: ['PERS503']
+-----------------
+-----------------
+Course Name: PSY304
+Prerequisites: ['PSY303']
+-----------------
+-----------------
+Course Name: PSY305
+Prerequisites: ['PSY303']
+-----------------
+-----------------
+Course Name: PSY306
+Prerequisites: ['PSY301', 'PSY303']
+-----------------
+-----------------
+Course Name: PSY311
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY312
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY314
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY315
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY320
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY325
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY340
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY343
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY345
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY360
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY361
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY362
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY363
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY364
+Prerequisites: ['PSY430', 'PSY301', 'PSY308']
+-----------------
+-----------------
+Course Name: PSY365
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY398
+Prerequisites: ['PSY301', 'PSY303']
+-----------------
+-----------------
+Course Name: PSY399
+Prerequisites: ['PSY301', 'PSY303']
+-----------------
+-----------------
+Course Name: PSY403
+Prerequisites: ['PSY301', 'PSY303']
+-----------------
+-----------------
+Course Name: PSY410
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY411
+Prerequisites: ['PSY370']
+-----------------
+-----------------
+Course Name: PSY412
+Prerequisites: ['PSY390']
+-----------------
+-----------------
+Course Name: PSY415
+Prerequisites: ['PSY352']
+-----------------
+-----------------
+Course Name: PSY416
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY421
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY422
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: PSY450
+Prerequisites: ['PSY352', 'PSY301']
+-----------------
+-----------------
+Course Name: PSY452
+Prerequisites: ['PSY301']
+-----------------
+-----------------
+Course Name: RUS120
+Prerequisites: ['RUS102']
+-----------------
+-----------------
+Course Name: RUS130
+Prerequisites: ['RUS201']
+-----------------
+-----------------
+Course Name: SPA120
+Prerequisites: ['SPA102']
+-----------------
+-----------------
+Course Name: SPA130
+Prerequisites: ['SPA201']
+-----------------
+-----------------
+Course Name: SPA140
+Prerequisites: ['SPA202']
+-----------------
+-----------------
+Course Name: TLL130
+Prerequisites: ['TLL301']
+-----------------
+-----------------
+Course Name: TLL150
+Prerequisites: ['TLL303']
+-----------------
+-----------------
+Course Name: TLL530
+Prerequisites: ['TLL501']
+-----------------
+-----------------
+Course Name: TLL550
+Prerequisites: ['TLL503']
+-----------------
+Script have finished in 5.9606 sec(s).

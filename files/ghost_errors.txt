@@ -1,0 +1,17 @@
+-----------------
+Course Name: ACC402
+Prerequisites: ['ACC401', ['ACC401']]
+-----------------
+-----------------
+Course Name: HUM413
+Prerequisites: ['HUM204', ['HUM204']]
+-----------------
+-----------------
+Course Name: JAP550
+Prerequisites: ['JAP540', ['JAP540']]
+-----------------
+-----------------
+Course Name: PSY410
+Prerequisites: ['PSY301', ['PSY301']]
+-----------------
+Script have finished in 5.9300 sec(s).
