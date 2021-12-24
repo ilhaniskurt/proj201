@@ -14,12 +14,6 @@ This branch is currently being worked upon.
   * LINK_FILTER = "https://suis.sabanciuniv.edu/prod/bwckctlg.p_disp_course_detail"
   * PICKLE_NAME = "course_data"
 
-## "sorter.py"
-* __Function:__ The script that creates additional dictionaries depending on context
-
-* __Local Modules Used:__
-  * "parser.py"
-
 ## "logic.py"
 * __Function:__ Algorithms for logical operations
 
@@ -32,13 +26,11 @@ This branch is currently being worked upon.
 * __Local Modules Used:__
   * "parser.py"
   * "logic.py"
-  * "sorter.py"
 
 # Credits:
 * "parser.py" - İlhan Yavuz İskurt
-* "sorter.py" - İlhan Yavuz İskurt & Muslim Malsagov
+* "logic.py" - İlhan Yavuz İskurt & Muslim Malsagov
 * "root.py" - İlhan Yavuz İskurt
-* "logic.py" - İlhan Yavuz İskurt
 
 # Acknowledgements:
 "parser.py" is based and improved upon "kkkk.py" which was written by Mete Harun Akçay (meteharun@sabanciuniv.edu)
