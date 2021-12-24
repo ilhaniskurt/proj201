@@ -15,7 +15,7 @@
   * Activate the virtual environment by typing "./penv/bin/Activate.ps1" in the powershell. If doesn't allow look up online how to allow powershell to run remote scripts online.
   * Execute the python script run.py by "python run.py
 
-* __Modifications:__
+## __Modifications:__
   * Change the variable inside the displayDicts inside the "scripts/root.py" with the below variables to change the output of the file
     * catalog_dict # Catalog without any alterations
     * catalog_dict2 # Catalog with looping prerequisites removed
