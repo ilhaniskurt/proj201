@@ -1,0 +1,5 @@
+-----------------
+Course Name: POLS302
+Prerequisites: (POLS301|SPS102)&(SPS101
+-----------------
+Script have finished in 6.0687 sec(s).
