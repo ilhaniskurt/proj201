@@ -16,6 +16,7 @@
   * Execute the python script run.py by "python run.py
 
 ## __Modifications:__
+  * Change the html file in "files/" with the catalog you want to work with. (Do not forget to name it "catalog.html". You can change the default names and directory from the environment variables inside "parser.py")
   * Change the variable inside the displayDicts inside the "scripts/root.py" with the below variables to change the output of the file
     * catalog_dict # Catalog without any alterations
     * catalog_dict2 # Catalog with looping prerequisites removed
@@ -37,7 +38,7 @@
   * FILE_DIR = "beta/files",
   * FILE_NAME = "catalog.html",
   * LINK_FILTER = "https://suis.sabanciuniv.edu/prod/bwckctlg.p_disp_course_detail"
-  * PICKLE_NAME = "course_data"
+  * PICKLE_NAME = "course_list"
 
 ## "logic.py"
 * __Function:__ Algorithms for logical operations
